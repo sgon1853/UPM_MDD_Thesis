@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SIGEM.Client.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DependencyRulesCounter" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">net://localhost:SIGEM</Value>
+    </Setting>
+    <Setting Name="ConnectionStringUserPreferences" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">file://UserPrefs.xml</Value>
+    </Setting>
+    <Setting Name="ConfigurationOfReports" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Reports.config.xml</Value>
+    </Setting>
+    <Setting Name="ConjunctionPolicy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AND</Value>
+    </Setting>
+    <Setting Name="UserPreferencesByUser" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MainMenuReports" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MainMenuReports.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Report>
+	<Object>
+		<OID Class.Name="ExpenseReport">
+			<OID.Field Value="2"/>
+		</OID>
+		<Properties>
+			<Attribute Name="PresentDate"/>
+			<Attribute Name="id_ExpenseRepor"/>
+			<Attribute Name="Employee.EmpName"/>
+			<Attribute Name="Employee.EmpSurname"/>
+			<Role Role.Name="ExpenseLines" Class.Name="ExpenseLine" InvRole.Name="ExpenseReport">
+				<Properties>
+					<Attribute Name="Units"/>
+					<Attribute Name="Price"/>
+					<Attribute Name="LnDescription"/>
+				</Properties>
+			</Role>
+		</Properties>
+	</Object>
+</Report>

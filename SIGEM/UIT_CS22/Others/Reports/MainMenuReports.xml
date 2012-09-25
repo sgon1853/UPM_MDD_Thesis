@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--	Each report is defined in a Report element which contains:
+	-Attributes:
+		agents: Comma separated string. Agent class names. Empty sting means all Agents.
+		class: Class name.
+		filtername: Filter name.
+		datasetfile: DataSet filename.
+	- and one Language element for each language to be supported: At least one element is mandatory. Set texts for parent element.
+		key: User selected language (Culture name). Empty string means that report is for all languages.
+		alias: Text to be shown in the menu.
+		title: Text to be shown in the form.
+		reportfilepath: Report filename.
+-->
+<!--	Report menu entries can be organized hierarchical structure using SubMenu elements, which contains:
+	- Attributes:
+		agents: Comma separated string Agent class names. Empty sting means all Agents.
+	- and a list of supported languages in Language elements:
+		key: User selected language (Culture name). Empty string means that report is for all languages.
+		alias: Text to be shown.
+-->
+<!-- Example -->
+<Reports agents="">
+	<Language key="" alias="Reports"/>
+	<Report agents="" class="Customer" filtername="F_Customer_By_Name" datasetfile="CustomerCommonData.xsd">
+		<Language key="" alias="Customers Report in Crystal" title="Report: Customers by name in Crystal" reportfilepath="CustomerCommonData.rpt"/>
+	</Report>
+	<Report agents="Administrator" class="Customer" filtername="F_Customer_By_Name" datasetfile="CustomerPersonalData.xsd">
+		<Language key="" alias="Customers Personal Information Report" title="Personal Information Report" reportfilepath="CustomerPrivateInfo.rdlc"/>
+	</Report>
+	<SubMenu agents="AccountUser">
+		<Language key="" alias="Accounts"/>
+		<Report agents="" class="Account" filtername="F_Account_BetweenDates" datasetfile="Account_LowDetail.xsd">
+			<Language key="" alias="Accounts report" title="Low detail Accounts report" reportfilepath="AccountLowDetail.rpt"/>
+		</Report>
+	</SubMenu>
+	<SubMenu agents="Administrador">
+		<Language key="en-US" alias="Admin reports"/>
+		<Language key="de-DE" alias="Admin Berichte"/>
+		<Report agents="" class="Invoice" filtername="F_Invoice_1" datasetfile="Invoice.xsd">
+			<Language key="en-US" alias="Invoices between dates" title="Invoices between dates" reportfilepath="Invoices_English.rpt"/>
+			<Language key="de-DE" alias="Rechnungen zwischen den Terminen" title="Rechnungen zwischen den Terminen" reportfilepath="Invoices_German.rpt"/>
+		</Report>
+	</SubMenu>
+</Reports>

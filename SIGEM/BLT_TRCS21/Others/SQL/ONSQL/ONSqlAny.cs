@@ -1,0 +1,43 @@
+// 3.4.4.5
+
+using System;
+using System.Collections;
+using System.Collections.Specialized;
+
+namespace SIGEM.Business.SQL
+{
+	/// <summary>
+	/// ONSqlAny
+	/// </summary>
+	public class ONSqlAny : ONSqlScalar
+	{
+		#region Constructors
+		/// <summary>
+		/// Default Constructor
+		/// </summary>
+		public ONSqlAny()
+		{
+		}
+		public ONSqlAny(ONSqlSelect onSqlSelect) : base(onSqlSelect)
+		{
+		}
+		public ONSqlAny(ONSqlSelect onSqlSelect, string variable) : base(onSqlSelect, variable)
+		{
+		}
+		#endregion
+
+		#region Select
+		/// <summary>
+		/// Adds to the SELECT part of the SQL sentence the reserved word to do the required action for ANY
+		/// </summary>
+		public void AddSelect()
+		{
+			if (SuperQuery != null)
+				mSelectAttributes.Add("*");
+			else
+				mSelectAttributes.Add("Count(*)");
+		}
+		#endregion
+	}
+}
+

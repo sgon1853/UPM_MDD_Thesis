@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<!--
+Microsoft ResX Schema
+
+Version 2.0
+
+The primary goals of this format is to allow a simple XML format
+that is mostly human readable. The generation and parsing of the
+various data types are done through the TypeConverter classes
+associated with the data types.
+
+Example:
+
+... ado.net/XML headers & schema ...
+<resheader name="resmimetype">text/microsoft-resx</resheader>
+<resheader name="version">2.0</resheader>
+<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+<data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+	<value>[base64 mime encoded serialized .NET Framework object]</value>
+</data>
+<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+	<value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+	<comment>This is a comment</comment>
+</data>
+
+There are any number of "resheader" rows that contain simple
+name/value pairs.
+
+Each data row contains a name, and value. The row also contains a
+type or mimetype. Type corresponds to a .NET class that support
+text/value conversion through the TypeConverter architecture.
+Classes that don't support this are serialized and stored with the
+mimetype set.
+
+The mimetype is used for serialized objects, and tells the
+ResXResourceReader how to depersist the object. This is currently not
+extensible. For a given mimetype the value must be set accordingly:
+
+Note - application/x-microsoft.net.object.binary.base64 is the format
+that the ResXResourceWriter will generate, however the reader can
+read any of the formats listed below.
+
+mimetype: application/x-microsoft.net.object.binary.base64
+value   : The object must be serialized with
+	: System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+	: and then encoded with base64 encoding.
+
+mimetype: application/x-microsoft.net.object.soap.base64
+value   : The object must be serialized with
+	: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+	: and then encoded with base64 encoding.
+
+mimetype: application/x-microsoft.net.object.bytearray.base64
+value   : The object must be serialized into a byte array
+	: using a System.ComponentModel.TypeConverter
+	: and then encoded with base64 encoding.
+-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+	<xsd:element name="root" msdata:IsDataSet="true">
+		<xsd:complexType>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element name="metadata">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="value" type="xsd:string" minOccurs="0" />
+						</xsd:sequence>
+						<xsd:attribute name="name" use="required" type="xsd:string" />
+						<xsd:attribute name="type" type="xsd:string" />
+						<xsd:attribute name="mimetype" type="xsd:string" />
+						<xsd:attribute ref="xml:space" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="assembly">
+					<xsd:complexType>
+						<xsd:attribute name="alias" type="xsd:string" />
+						<xsd:attribute name="name" type="xsd:string" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="data">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+						</xsd:sequence>
+						<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+						<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+						<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						<xsd:attribute ref="xml:space" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="resheader">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+						</xsd:sequence>
+						<xsd:attribute name="name" type="xsd:string" use="required" />
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+	<value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+	<value>2.0</value>
+</resheader>
+<resheader name="reader">
+	<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+	<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+
+	<data name="nodenextblock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\nodenextblock.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="agent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\agent.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="apply" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\apply.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="blob" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\blob.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="cascade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\cascade.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="changePassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\changePassword.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\close.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="closeAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\closeAll.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="newicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\new.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\edit.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\delete.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="enlarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\enlarge.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\error.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="exeNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\exeNext.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="exePrevious" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\exePrevious.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\exit.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="exportToExcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\exportToExcel.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="exportToWord" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\exportToWord.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\help.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\login.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="loginMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\loginMenu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="maximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\maximize.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\minimize.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\next.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\previous.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\print.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\refresh.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\search.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="searchFilter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\searchFilter.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="splashImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\splashImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="tileHorizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\tileHorizontal.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="tileVertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\tileVertical.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="unknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\unknown.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\warning.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\down.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="preferences" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\preferences.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="savePosition" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\savePosition.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+		<data name="saveWidth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+	<value>..\Resources\images\saveWidth.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\up.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="line" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\line.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+	<data name="NaveNodriza_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\nodeicon1.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>NaveNodriza, Instance Node Icon</comment>
+	</data>
+	<data name="NaveNodriza_SIU_Crear_NaveNodriza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\new.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>NaveNodriza, Crear_NaveNodriza</comment>
+	</data>
+	<data name="NaveNodriza_SIU_SIU_delete_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\delete.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>NaveNodriza, SIU_delete_instance</comment>
+	</data>
+	<data name="NaveNodriza_SIU_SIU_edit_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\siu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>NaveNodriza, SIU_edit_instance</comment>
+	</data>
+	<data name="NaveNodriza_PIU_PIU_NaveNodriza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\piu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>NaveNodriza, PIU_NaveNodriza</comment>
+	</data>
+	<data name="NaveNodriza_IIU__Auto_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\iiu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>NaveNodriza, _Auto_</comment>
+	</data>
+	<data name="Aeronave_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\nodeicon2.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Aeronave, Instance Node Icon</comment>
+	</data>
+	<data name="Aeronave_SIU_Crear_Aeronave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\new.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Aeronave, Crear_Aeronave</comment>
+	</data>
+	<data name="Aeronave_SIU_SIU_delete_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\delete.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Aeronave, SIU_delete_instance</comment>
+	</data>
+	<data name="Aeronave_SIU_SIU_edit_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\siu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Aeronave, SIU_edit_instance</comment>
+	</data>
+	<data name="Aeronave_PIU_PIU_Aeronave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\piu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Aeronave, PIU_Aeronave</comment>
+	</data>
+	<data name="Aeronave_IIU__Auto_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\iiu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Aeronave, _Auto_</comment>
+	</data>
+	<data name="Pasajero_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\nodeicon3.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Pasajero, Instance Node Icon</comment>
+	</data>
+	<data name="Pasajero_SIU_SIU_create_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\new.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Pasajero, SIU_create_instance</comment>
+	</data>
+	<data name="Pasajero_SIU_SIU_delete_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\delete.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Pasajero, SIU_delete_instance</comment>
+	</data>
+	<data name="Pasajero_SIU_SIU_edit_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\siu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Pasajero, SIU_edit_instance</comment>
+	</data>
+	<data name="Pasajero_PIU_PIU_Pasajero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\piu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Pasajero, PIU_Pasajero</comment>
+	</data>
+	<data name="Pasajero_IIU__Auto_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\iiu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Pasajero, _Auto_</comment>
+	</data>
+	<data name="PasajeroAeronave_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\nodeicon1.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>PasajeroAeronave, Instance Node Icon</comment>
+	</data>
+	<data name="PasajeroAeronave_SIU_SIU_create_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\new.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>PasajeroAeronave, SIU_create_instance</comment>
+	</data>
+	<data name="PasajeroAeronave_SIU_SIU_delete_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\delete.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>PasajeroAeronave, SIU_delete_instance</comment>
+	</data>
+	<data name="PasajeroAeronave_SIU_SIU_edit_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\siu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>PasajeroAeronave, SIU_edit_instance</comment>
+	</data>
+	<data name="PasajeroAeronave_IIU_IIU_PasajeroAeronave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\iiu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>PasajeroAeronave, IIU_PasajeroAeronave</comment>
+	</data>
+	<data name="PasajeroAeronave_PIU_PIU_PasajeroAeronave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\piu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>PasajeroAeronave, PIU_PasajeroAeronave</comment>
+	</data>
+	<data name="PasajeroAeronave_MDIU_MDIU_PasajeroAeronave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\mdiu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>PasajeroAeronave, MDIU_PasajeroAeronave</comment>
+	</data>
+	<data name="Revision_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\nodeicon2.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Revision, Instance Node Icon</comment>
+	</data>
+	<data name="Revision_SIU_SIU_create_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\new.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Revision, SIU_create_instance</comment>
+	</data>
+	<data name="Revision_SIU_SIU_delete_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\delete.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Revision, SIU_delete_instance</comment>
+	</data>
+	<data name="Revision_SIU_SIU_edit_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\siu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Revision, SIU_edit_instance</comment>
+	</data>
+	<data name="Revision_IIU_IIU_Revision" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\iiu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Revision, IIU_Revision</comment>
+	</data>
+	<data name="Revision_PIU__Auto_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\piu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Revision, _Auto_</comment>
+	</data>
+	<data name="RevisionPasajero_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\nodeicon3.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>RevisionPasajero, Instance Node Icon</comment>
+	</data>
+	<data name="RevisionPasajero_SIU_SIU_create_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\new.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>RevisionPasajero, SIU_create_instance</comment>
+	</data>
+	<data name="RevisionPasajero_SIU_SIU_delete_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\delete.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>RevisionPasajero, SIU_delete_instance</comment>
+	</data>
+	<data name="RevisionPasajero_SIU_SIU_edit_instance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\siu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>RevisionPasajero, SIU_edit_instance</comment>
+	</data>
+	<data name="RevisionPasajero_PIU_PIU_RevisionPasajero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\piu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>RevisionPasajero, PIU_RevisionPasajero</comment>
+	</data>
+	<data name="RevisionPasajero_IIU__Auto_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Resources\images\iiu.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>RevisionPasajero, _Auto_</comment>
+	</data>
+	<data name="Administrador_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\\Resources\\images\\nodeicon1.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+		<comment>Administrador, Instance Node Icon</comment>
+	</data>
+</root>

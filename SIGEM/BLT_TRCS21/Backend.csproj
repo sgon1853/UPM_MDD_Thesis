@@ -1,0 +1,986 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<LastOpenVersion>7.10.3077</LastOpenVersion>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ApplicationIcon>
+		</ApplicationIcon>
+		<AssemblyKeyContainerName>
+		</AssemblyKeyContainerName>
+		<AssemblyName>Backend</AssemblyName>
+		<AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+		<DefaultClientScript>JScript</DefaultClientScript>
+		<DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+		<DefaultTargetSchema>IE50</DefaultTargetSchema>
+		<DelaySign>false</DelaySign>
+		<OutputType>Library</OutputType>
+		<RootNamespace>SIGEM.Business</RootNamespace>
+		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+		<StartupObject>
+		</StartupObject>
+		<FileUpgradeFlags>
+		</FileUpgradeFlags>
+		<UpgradeBackupLocation>
+		</UpgradeBackupLocation>
+		<SignAssembly>true</SignAssembly>
+		<ProjectGuid>{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}</ProjectGuid>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<OutputPath>bin\Debug\</OutputPath>
+		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+		<BaseAddress>285212672</BaseAddress>
+		<CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+		<ConfigurationOverrideFile>
+		</ConfigurationOverrideFile>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<DocumentationFile>
+		</DocumentationFile>
+		<DebugSymbols>true</DebugSymbols>
+		<FileAlignment>4096</FileAlignment>
+		<NoStdLib>false</NoStdLib>
+		<NoWarn>
+		</NoWarn>
+		<Optimize>false</Optimize>
+		<RegisterForComInterop>false</RegisterForComInterop>
+		<RemoveIntegerChecks>false</RemoveIntegerChecks>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<WarningLevel>4</WarningLevel>
+		<DebugType>full</DebugType>
+		<ErrorReport>prompt</ErrorReport>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<OutputPath>bin\Release\</OutputPath>
+		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+		<BaseAddress>285212672</BaseAddress>
+		<CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+		<ConfigurationOverrideFile>
+		</ConfigurationOverrideFile>
+		<DefineConstants>TRACE</DefineConstants>
+		<DocumentationFile>
+		</DocumentationFile>
+		<DebugSymbols>false</DebugSymbols>
+		<FileAlignment>4096</FileAlignment>
+		<NoStdLib>false</NoStdLib>
+		<NoWarn>
+		</NoWarn>
+		<Optimize>true</Optimize>
+		<RegisterForComInterop>false</RegisterForComInterop>
+		<RemoveIntegerChecks>false</RemoveIntegerChecks>
+		<TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+		<WarningLevel>4</WarningLevel>
+		<DebugType>none</DebugType>
+		<ErrorReport>prompt</ErrorReport>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="mscorlib">
+			<Name>mscorlib</Name>
+		</Reference>
+		<Reference Include="System">
+			<Name>System</Name>
+		</Reference>
+		<Reference Include="System.Data">
+			<Name>System.Data</Name>
+		</Reference>
+		<Reference Include="System.EnterpriseServices">
+			<Name>System.EnterpriseServices</Name>
+		</Reference>
+		<Reference Include="System.Messaging">
+			<Name>System.Messaging</Name>
+		</Reference>
+		<Reference Include="System.Windows.Forms">
+			<Name>System.Windows.Forms</Name>
+		</Reference>
+		<Reference Include="System.Xml">
+			<Name>System.XML</Name>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include = "Action\GlobalTransactionAction.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Executive\GlobalTransactionExecutive.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Server\GlobalTransactionServer.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "XML\Classes\GlobalTransactionXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Data\GlobalTransactionData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Others\Texts\GlobalTransactionText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "OIDs\NaveNodrizaOid.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Data\NaveNodrizaData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Data\Filter\NaveNodrizaHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Others\Texts\NaveNodrizaClassText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Action\NaveNodrizaAction.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\NaveNodrizaQuery.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\NaveNodrizaLMDFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\NaveNodrizaHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Collection\NaveNodrizaCollection.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Instance\NaveNodrizaInstance.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Server\NaveNodrizaServer.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Executive\NaveNodrizaExecutive.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "XML\Classes\NaveNodrizaXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "OIDs\AeronaveOid.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Data\AeronaveData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Data\Filter\AeronaveHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Others\Texts\AeronaveClassText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Action\AeronaveAction.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\AeronaveQuery.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\AeronaveLMDFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\AeronaveHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Collection\AeronaveCollection.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Instance\AeronaveInstance.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Server\AeronaveServer.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Executive\AeronaveExecutive.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "XML\Classes\AeronaveXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "OIDs\PasajeroOid.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Data\PasajeroData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Data\Filter\PasajeroHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Others\Texts\PasajeroClassText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Action\PasajeroAction.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\PasajeroQuery.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\PasajeroLMDFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\PasajeroHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Collection\PasajeroCollection.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Instance\PasajeroInstance.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Server\PasajeroServer.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Executive\PasajeroExecutive.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "XML\Classes\PasajeroXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "OIDs\PasajeroAeronaveOid.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Data\PasajeroAeronaveData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Data\Filter\PasajeroAeronaveHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Others\Texts\PasajeroAeronaveClassText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Action\PasajeroAeronaveAction.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\PasajeroAeronaveQuery.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\PasajeroAeronaveLMDFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\PasajeroAeronaveHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Collection\PasajeroAeronaveCollection.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Instance\PasajeroAeronaveInstance.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Server\PasajeroAeronaveServer.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Executive\PasajeroAeronaveExecutive.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "XML\Classes\PasajeroAeronaveXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "OIDs\RevisionOid.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Data\RevisionData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Data\Filter\RevisionHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Others\Texts\RevisionClassText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Action\RevisionAction.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\RevisionQuery.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\RevisionLMDFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\RevisionHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Collection\RevisionCollection.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Instance\RevisionInstance.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Server\RevisionServer.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Executive\RevisionExecutive.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "XML\Classes\RevisionXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "OIDs\RevisionPasajeroOid.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Data\RevisionPasajeroData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Data\Filter\RevisionPasajeroHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Others\Texts\RevisionPasajeroClassText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Action\RevisionPasajeroAction.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\RevisionPasajeroQuery.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\RevisionPasajeroLMDFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\RevisionPasajeroHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Collection\RevisionPasajeroCollection.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Instance\RevisionPasajeroInstance.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Server\RevisionPasajeroServer.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Executive\RevisionPasajeroExecutive.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "XML\Classes\RevisionPasajeroXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "OIDs\AdministradorOid.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Data\AdministradorData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Data\Filter\AdministradorHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Others\Texts\AdministradorClassText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Action\AdministradorAction.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\AdministradorQuery.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\AdministradorLMDFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Query\Filter\AdministradorHorizontalVisibility.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Collection\AdministradorCollection.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Instance\AdministradorInstance.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "Server\AdministradorServer.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include = "Executive\AdministradorExecutive.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include = "XML\Classes\AdministradorXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+
+		<Compile Include="Others\ONUserFunctions.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\Classes\FunctionXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="AssemblyInfo.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Action\ONAction.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Data\ONData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Data\ONDBData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Data\CtesBD.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Data\ONLVData.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Data\Filter\ONFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Data\Filter\ONFilterList.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Executive\ONExecutive.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Instance\ONInstance.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="LV\Filter\ONFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="LV\Filter\ONFilterList.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="OIDs\ONOid.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Collection\ONCollection.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\ONChangeDetectionInfo.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\ONContext.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\ONPath.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\ONSecureControl.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\ONServiceContext.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\ONStdFunctions.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\ONTrigger.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Lists\ONList.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Lists\ONListDictionary.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Lists\ONListDictionaryEntry.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Lists\ONListDictionaryEnumerator.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\AOP\IONContextArgumentAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\AOP\IONContextClassAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\AOP\IONContextServiceAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\AOP\ONContextAdder.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\AOP\ONContextAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\AOP\ONContextInterceptor.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\AOP\ONInterceptionAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\AOP\ONRealProxy.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\IONAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\ONCheckStateAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\ONDataClassAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\ONInboundArgumentAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\ONOutboundArgumentAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\ONServiceAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONActionClassAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONEventAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONIntegrityConstraintAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONOutboundArgumentsAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONPreconditionAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONSharedArgumentAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONSharedEventAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONSTEAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONTransactionAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Action\ONTriggerAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>		
+		<Compile Include="Others\Attributes\Components\Action\ONReflexiveEventAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Instance\ONAttributeAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Instance\ONFacetAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Instance\ONInstanceClassAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Instance\ONRoleAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Query\ONFilterAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Query\ONQueryClassAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Query\OrderCriteriaAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Server\ONOperationAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Server\ONServerClassAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\Components\Server\ONTransactionalServiceAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\XML\ONFilterXMLAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\XML\ONGateXMLAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\XML\ONServiceXMLAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Attributes\XML\ONNavigationalFilterXMLAttribute.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Cache\ONActionCacheItem.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Cache\ONServiceCacheItem.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Enumerations\DataTypeEnumerator.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Enumerations\JoinType.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Enumerations\OrderByTypeEnumerator.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Enumerations\ServiceTypeEnumeration.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Enumerations\VisibilityState.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONAccessAgentValidationException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONAgentValidationException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONAlternateKeyException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONArgumentException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONChangeDetectionErrorsException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONErrorWithLegacySystem.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONExceptionInfo.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONInstanceExistException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONInstanceNotExistException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONIntegrityConstraintException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONMaxCardinalityException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONMaxLenghtArgumentException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONMinCardinalityException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONMissingArgumentException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONNotNullArgumentException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONNullException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONPreconditionException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONRelatedExistException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONRelatedNotExistException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONServiceArgumentsException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONStaticException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONStaticCreationException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONSTDException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONSystemException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONXMLAlternateKeyFieldException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONXMLAlternateKeyNameException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONXMLArgumentException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONXMLException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONXMLFormatException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONXMLOIDFieldException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONXMLOIDWrongClassException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONXMLStructureException.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Exceptions\ONXMLNavFilterException.cs">
+			<SubType>Code</SubType>
+		</Compile>		
+		<Compile Include="Others\Sql\ONSqlAlias.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSqlPath.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSql.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlAny.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlAvg.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlCount.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlDelete.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlExist.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlForAll.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlForAllDistinct.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlForAllSame.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlGetOne.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlInsert.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlInsertAutoInc.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlMax.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlMin.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlScalar.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlSelect.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlSum.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlUnique.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Sql\ONSql\ONSqlUpdate.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Texts\ONErrorText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\IONType.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\ONLinkedToList.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONBlob.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONBool.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONDate.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONDateTime.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONInt.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONNat.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONReal.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONSimpleType.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONString.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Others\Types\SimpleTypes\ONTime.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Query\ONQuery.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Query\DisplaySet\ONDisplaySet.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Query\DisplaySet\ONDisplaySetItem.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Query\Filter\ONFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Query\Filter\ONFilterList.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Query\Filter\QueryByRelatedFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Query\Filter\QueryByOidFilter.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Query\OrderCriteria\ONOrderCriteria.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Query\OrderCriteria\ONOrderCriteriaItem.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="Server\ONServer.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\ONArgumentInfo.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\ONServiceInfo.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\XML_Listener.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\Classes\ONXml.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlAutonumeric.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlBlob.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlBool.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlDate.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlDateTime.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlInt.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlNat.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlPassword.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlReal.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlString.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlText.cs">
+			<SubType>Code</SubType>
+		</Compile>
+		<Compile Include="XML\SimpleTypes\ONXmlTime.cs">
+			<SubType>Code</SubType>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="Key.snk" />
+	</ItemGroup>
+	<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+	<PropertyGroup>
+		<PreBuildEvent>
+		</PreBuildEvent>
+		<PostBuildEvent>
+		</PostBuildEvent>
+	</PropertyGroup>
+</Project>

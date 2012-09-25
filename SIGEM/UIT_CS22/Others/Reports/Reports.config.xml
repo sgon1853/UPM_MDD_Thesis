@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Each report is represented in a Report element which contains:
+	- Attributes:
+		agents: Comma separated string Agent class names. Empty sting means all Agents.
+		class: Class name.
+		reporttype: One of the following values: Word, Excel, Crystal, RDLC.
+		datasetfile: DataSet filename. Only for Crystal and RDLC types.
+	- and one Language element for each language to be supported: At least one element is mandatory.
+		key: User selected language (Culture name). Empty string means that report is for all languages.
+		alias: Text to be shown
+		reportfilepath: Report filename
+-->
+<!-- Example -->
+<InstanceReports>
+	<Report agents="" class="Customer" reporttype="Crystal" datasetfile="CommonDataSet.xsd">
+		<Language key="" alias="Common data" reportfilepath="CustomerCommonData.rpt"/>
+	</Report>
+	<Report agents="Administrator, AccountUser" class="Customer" reporttype="RDLC" datasetfile="CustomerPersonalDataSet.xsd">
+		<Language key="de-DE" alias="Persönliche Daten" reportfilepath="CustomerPersonalData_German.rdlc"/>
+		<Language key="en-US" alias="Personal Data" reportfilepath="CustomerPersonalData_English.rdlc"/>
+	</Report>
+</InstanceReports>
