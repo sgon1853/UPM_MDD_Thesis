@@ -1,770 +1,772 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProductVersion>8.0.50727</ProductVersion>
-		<SchemaVersion>2.0</SchemaVersion>
-		<ProjectGuid>{24AD206E-BFBA-440E-BE53-68B38BB30822}</ProjectGuid>
-		<OutputType>WinExe</OutputType>
-		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>SIGEM.Client</RootNamespace>
-		<AssemblyName>Desktop</AssemblyName>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<DebugType>pdbonly</DebugType>
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Secure Release|AnyCPU' ">
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE;SECURE</DefineConstants>
-		<Optimize>true</Optimize>
-		<DebugType>pdbonly</DebugType>
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="System" />
-		<Reference Include="System.Data" />
-		<Reference Include="System.Deployment" />
-		<Reference Include="System.Drawing" />
-		<Reference Include="System.Windows.Forms" />
-		<Reference Include="System.Xml" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Adaptor\Server\Arguments\Arguments.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Arguments\FilterVariables.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Arguments\Navigational.Filtering.Arguments.ArgumentList.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Arguments\Navigational.Filtering.Variables.ArgumentList.Serializer.cs" />
-		<Compile Include="Adaptor\Server\ChangeDetectionItems\ChangeDetectionItem.cs" />
-		<Compile Include="Adaptor\Server\ChangeDetectionItems\ChangeDetectionItems.Serializer.cs" />
-		<Compile Include="Adaptor\Server\OID\AdaptorOID.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Request\Query\Query.Request.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Request\Query\QueryRequest.cs" />
-		<Compile Include="Adaptor\Server\Request\Request.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Request\Service\Service.Request.cs" />
-		<Compile Include="Adaptor\Server\Request\Service\Service.Request.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Response\Query\Query.Response.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Response\Response.Serializer.cs" />
-		<Compile Include="Adaptor\Server\ServerDataTable.cs" />
-		<Compile Include="Adaptor\Server\ServerOIDs.cs" />
-		<Compile Include="Adaptor\Server\Response\Service\Service.Response.cs" />
-		<Compile Include="Adaptor\Server\Response\Service\Service.Response.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Response\Statistics\Statistics.cs" />
-		<Compile Include="Adaptor\Server\Response\Statistics\Statistics.Serializer.cs" />
-		<Compile Include="Adaptor\Server\ServerQuery.cs" />
-		<Compile Include="Adaptor\Server\ServerQueryWithNavigationalFiltering.cs" />
-		<Compile Include="Adaptor\Server\Arguments\Argument.cs" />
-		<Compile Include="Adaptor\Server\Common\MODEL.Types.cs" />
-		<Compile Include="Adaptor\Server\Common\DTD.cs" />
-		<Compile Include="Adaptor\Server\ServerConnection.cs" />
-		<Compile Include="Adaptor\Server\ServerService.cs" />
-		<Compile Include="Adaptor\Server\ServerNavigationalFiltering.cs" />
-		<Compile Include="Adaptor\Server\Server-Arguments.cs" />
-		<Compile Include="Adaptor\Server\Error.Exceptions\Error.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Error.Exceptions\Exception.cs" />
-		<Compile Include="Adaptor\Server\Error.Exceptions\ChangedItem.cs" />
-		<Compile Include="Adaptor\Server\Error.Exceptions\ChangedItems.Serializer.cs" />
-		<Compile Include="Adaptor\Server\Request\Request.cs" />
-		<Compile Include="Adaptor\Server\Response\Response.cs" />
-		<Compile Include="Adaptor\Socket\ActiveXConnection.cs" />
-		<Compile Include="Adaptor\Socket\HTTPConnection.cs" />
-		<Compile Include="Adaptor\Socket\NativeConnection.cs" />
-		<Compile Include="Adaptor\Socket\AbstractConnection.cs" />
-		<Compile Include="Adaptor\Socket\SOAPConnection.cs" />
-
-		<Compile Include="Controllers\Controller.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\ActionController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\ActionItemController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\ArgumentController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\ArgumentDVController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\ArgumentOVController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\ArgumentOVControllerAbstract.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\ArgumentOVPreloadController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\DisplaySetByBlocksController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\DisplaySetController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\DisplaySetItem.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\DisplaySetInformation.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\DisplaySetServiceInfo.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\DisplaySetServiceArgumentInfo.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\HatElementController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\HatLeafController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\HatNodeController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\HatLeafReportController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\NavigationController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\NavigationItemController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\OrderCriteriaController.cs" />
-		<Compile Include="Controllers\Auxiliar patterns\TreeNodeController.cs" />
-		<Compile Include="Controllers\ControllerFactory\DefinedSelections.cs" />
-		<Compile Include="Controllers\ControllerFactory\IntroductionPatterns.cs" />
-		<Compile Include="Controllers\ControllerFactory\Classes\NaveNodriza.cs" />
-		<Compile Include="Controllers\ControllerFactory\Classes\Aeronave.cs" />
-		<Compile Include="Controllers\ControllerFactory\Classes\Pasajero.cs" />
-		<Compile Include="Controllers\ControllerFactory\Classes\PasajeroAeronave.cs" />
-		<Compile Include="Controllers\ControllerFactory\Classes\Revision.cs" />
-		<Compile Include="Controllers\ControllerFactory\Classes\RevisionPasajero.cs" />
-		<Compile Include="Controllers\ControllerFactory\MainScenario.cs" />
-		<Compile Include="Controllers\Events\RefreshNodeRequiredEventArgs.cs" />
-		<Compile Include="Controllers\Events\LaunchingScenarioEventArgs.cs" />
-		<Compile Include="Controllers\Events\ContextRequiredEventArgs.cs" />
-		<Compile Include="Controllers\Events\ExecuteCommandRefreshNodeEventArgs.cs" />
-		<Compile Include="Controllers\Events\FinalNodeSelectedEventArgs.cs" />
-		<Compile Include="Controllers\Events\IntermediaNodeSelectedEventArgs.cs" />
-		<Compile Include="Controllers\Events\GetNextNodeDataBlockEventArgs.cs" />
-		<Compile Include="Controllers\Events\InstanceNodeSelectedEventArgs.cs" />
-		<Compile Include="Controllers\Events\NodeDataToBeRefreshedEventArgs.cs" />
-		<Compile Include="Controllers\Events\SearchIntermediaNodeEventArgs.cs" />
-		<Compile Include="Controllers\Events\SelectedInstancesRequiredEventArgs.cs" />
-		<Compile Include="Controllers\Events\ShowDataInSubNodeEventArgs.cs" />
-		<Compile Include="Controllers\Events\ArgumentEventArgs.cs" />
-		<Compile Include="Controllers\Events\EnabledChangedEventArgs.cs" />
-		<Compile Include="Controllers\Events\CheckForPendingChangesEventArgs.cs" />
-		<Compile Include="Controllers\Events\ExecuteCommandBaseEventArgs.cs" />
-		<Compile Include="Controllers\Events\ExecuteCommandEditorInstanceEventArgs.cs" />
-		<Compile Include="Controllers\Events\ExecuteCommandEventArgs.cs" />
-		<Compile Include="Controllers\Events\ExecuteCommandRefreshEventArgs.cs" />
-		<Compile Include="Controllers\Events\ExecuteFilterEventArgs.cs" />
-		<Compile Include="Controllers\Events\FirstPageEventArgs.cs" />
-		<Compile Include="Controllers\Events\GotFocusEventArgs.cs" />
-		<Compile Include="Controllers\Events\InstanceCreatedEventArgs.cs" />
-		<Compile Include="Controllers\Events\InstanceDeletedEventArgs.cs" />
-		<Compile Include="Controllers\Events\InstanceModifiedEventArgs.cs" />
-		<Compile Include="Controllers\Events\InstancesSelectedEventArgs.cs" />
-		<Compile Include="Controllers\Events\LostFocusEventArgs.cs" />
-		<Compile Include="Controllers\Events\NextPageEventArgs.cs" />
-		<Compile Include="Controllers\Events\OrderCriteriaChangedEventArgs.cs" />
-		<Compile Include="Controllers\Events\PreviousPageEventArgs.cs" />
-		<Compile Include="Controllers\Events\RefreshInstanceArgs.cs" />
-		<Compile Include="Controllers\Events\RefreshPageEventArgs.cs" />
-		<Compile Include="Controllers\Events\RefreshRequiredEventArgs.cs" />
-		<Compile Include="Controllers\Events\RefreshRequiredInstancesEventArgs.cs" />
-		<Compile Include="Controllers\Events\RefreshRequiredMasterEventArgs.cs" />
-		<Compile Include="Controllers\Events\SelectInstanceEventArgs.cs" />
-		<Compile Include="Controllers\Events\SelectNextPreviousInstanceEventArgs.cs" />
-		<Compile Include="Controllers\Events\SelectedChangedEventArgs.cs" />
-		<Compile Include="Controllers\Events\SelectedInstanceChangedEventArgs.cs" />
-		<Compile Include="Controllers\Events\ServiceSuccessEventArgs.cs" />
-		<Compile Include="Controllers\Events\TriggerEventArgs.cs" />
-		<Compile Include="Controllers\Events\ValueChangedEventArgs.cs" />
-		<Compile Include="Controllers\Interfaces\IInstancesSelector.cs" />
-		<Compile Include="Controllers\Interfaces\ISelectionBackward.cs" />
-		<Compile Include="Controllers\Interfaces\IActionItemSuscriber.cs" />
-		<Compile Include="Controllers\Interfaces\IActionItemEvents.cs" />
-		<Compile Include="Controllers\Interfaces\INavigationItemSuscriber.cs" />
-		<Compile Include="Controllers\Interfaces\INavigationItemEvents.cs" />
-		<Compile Include="Controllers\Interfaces\IDetailController.cs" />
-		<Compile Include="Controllers\IUs\IUController.cs" />
-		<Compile Include="Controllers\IUs\IUInstanceController.cs" />
-		<Compile Include="Controllers\IUs\IUPopulationController.cs" />
-		<Compile Include="Controllers\IUs\IUMainController.cs" />
-		<Compile Include="Controllers\IUs\IUMasterDetailController.cs" />
-		<Compile Include="Controllers\IUs\IUQueryController.cs" />
-		<Compile Include="Controllers\IUs\IUServiceController.cs" />
-		<Compile Include="Controllers\IUs\IUInputControllers\IUFilterController.cs" />
-		<Compile Include="Controllers\IUs\IUInputControllers\IUInputFieldsController.cs" />
-		<Compile Include="Controllers\IUs\IUInputControllers\FilterControllerList.cs" />
-		<Compile Include="Controllers\IUs\IUInputControllers\ArgumentControllerList.cs" />
-		<Compile Include="Controllers\IUs\IUTreeController.cs" />
-		<Compile Include="Controllers\IUs\IUFilterReportController.cs" />
-		<Compile Include="Logics\NaveNodriza\Services\create_instanceLogic.cs" />
-		<Compile Include="Logics\NaveNodriza\Services\delete_instanceLogic.cs" />
-		<Compile Include="Logics\NaveNodriza\Services\edit_instanceLogic.cs" />
-		<Compile Include="Logics\NaveNodriza\\ClassLogic.cs" />
-		<Compile Include="Logics\Aeronave\Services\create_instanceLogic.cs" />
-		<Compile Include="Logics\Aeronave\Services\delete_instanceLogic.cs" />
-		<Compile Include="Logics\Aeronave\Services\edit_instanceLogic.cs" />
-		<Compile Include="Logics\Aeronave\\ClassLogic.cs" />
-		<Compile Include="Logics\Pasajero\Services\create_instanceLogic.cs" />
-		<Compile Include="Logics\Pasajero\Services\delete_instanceLogic.cs" />
-		<Compile Include="Logics\Pasajero\Services\edit_instanceLogic.cs" />
-		<Compile Include="Logics\Pasajero\\ClassLogic.cs" />
-		<Compile Include="Logics\PasajeroAeronave\Services\create_instanceLogic.cs" />
-		<Compile Include="Logics\PasajeroAeronave\Services\delete_instanceLogic.cs" />
-		<Compile Include="Logics\PasajeroAeronave\Services\edit_instanceLogic.cs" />
-		<Compile Include="Logics\PasajeroAeronave\\ClassLogic.cs" />
-		<Compile Include="Logics\Revision\Services\create_instanceLogic.cs" />
-		<Compile Include="Logics\Revision\Services\delete_instanceLogic.cs" />
-		<Compile Include="Logics\Revision\Services\edit_instanceLogic.cs" />
-		<Compile Include="Logics\Revision\\ClassLogic.cs" />
-		<Compile Include="Logics\RevisionPasajero\Services\create_instanceLogic.cs" />
-		<Compile Include="Logics\RevisionPasajero\Services\delete_instanceLogic.cs" />
-		<Compile Include="Logics\RevisionPasajero\Services\edit_instanceLogic.cs" />
-		<Compile Include="Logics\RevisionPasajero\\ClassLogic.cs" />
-		<Compile Include="Logics\Administrador\\ClassLogic.cs" />
-		<Compile Include="Logics\Agents.cs" />
-		<Compile Include="Logics\Logic.cs" />
-		<Compile Include="Logics\UserFunctions\UserFunctionsLogic.cs" />
-		<Compile Include="Logics\UserFunctions\RemoteUserFunctionsLogic.cs" />
-		<Compile Include="Logics\DependencyRulesEventLogic.cs" />
-		<Compile Include="Logics\DependencyRulesAgentLogic.cs" />
-		<Compile Include="Logics\DependencyRulesCache.cs" />
-		<Compile Include="Logics\ServiceType.cs" />
-		<Compile Include="Logics\ServiceEffectType.cs" />
-		<Compile Include="Logics\Preferences\FormPrefs.cs" />
-		<Compile Include="Logics\Preferences\InstancePrefs.cs" />
-		<Compile Include="Logics\Preferences\IScenarioPrefs.cs" />
-		<Compile Include="Logics\Preferences\PopulationPrefs.cs" />
-		<Compile Include="Logics\Preferences\PreferencesMng.cs" />
-		<Compile Include="Presentation\DefaultFormats.cs" />
-		<Compile Include="Presentation\ScenarioManager.cs" />
-		<Compile Include="Presentation\Forms\AutonumericPresentation.cs" />
-		<Compile Include="Presentation\Forms\BlobBoxPresentation.cs" />
-		<Compile Include="Presentation\Forms\ButtonPresentation.cs" />
-		<Compile Include="Presentation\Forms\ComboBoxPresentation.cs" />
-		<Compile Include="Presentation\Forms\ComboBoxDisplaySetPresentation.cs" />
-		<Compile Include="Presentation\Forms\ControlListPresentation.cs" />
-		<Compile Include="Presentation\Forms\DataGridViewPresentation.cs" />
-		<Compile Include="Presentation\Forms\EditorPresentation.cs" />
-		<Compile Include="Presentation\Forms\ScenarioPresentation.cs" />
-		<Compile Include="Presentation\Forms\LabelPresentation.cs" />
-		<Compile Include="Presentation\Forms\LabelPasswordPresentation.cs" />
-		<Compile Include="Presentation\Forms\TabPagePresentation.cs" />
-		<Compile Include="Presentation\Forms\LabelDisplaySetPresentation.cs" />
-		<Compile Include="Presentation\Forms\LinkLabelPresentation.cs" />
-		<Compile Include="Presentation\Forms\ListViewPresentation.cs" />
-		<Compile Include="Presentation\Forms\TextBoxPresentation.cs" />
-		<Compile Include="Presentation\Forms\MaskedTextBoxPresentation.cs" />
-		<Compile Include="Presentation\Forms\MaskedTextBoxPresentationWithDefinedSelection.cs" />
-		<Compile Include="Presentation\Forms\DateTimePickerPresentation.cs" />
-		<Compile Include="Presentation\Forms\ToolStripButtonPresentation.cs" />
-		<Compile Include="Presentation\Forms\ToolStripDropDownButtonPresentation.cs" />
-		<Compile Include="Presentation\Forms\ToolStripMenuItemPresentation.cs" />
-		<Compile Include="Presentation\Forms\ToolStripStatusLabelNumberInstancesPresentation.cs" />
-		<Compile Include="Presentation\Forms\ToolStripStatusLabelPresentation.cs" />
-		<Compile Include="Presentation\Forms\CheckBoxPresentation.cs" />
-		<Compile Include="Presentation\Forms\PasswordPresentation.cs" />
-		<Compile Include="Presentation\Forms\TreeViewPresentation.cs" />
-		<Compile Include="Presentation\Forms\TabControlPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\IPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\IDisplaySetPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\IDisplaySetByBlocksPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\ILabelPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\IEditorPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\ISelectorPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\IScenarioPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\IListPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\ITriggerPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\IGroupContainerPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\IMaskPresentation.cs" />
-		<Compile Include="Presentation\Interfaces\INumericPresentation.cs" />
-		<Compile Include="Presentation\Events\EnlargeTextChangedEventArgs.cs" />
-
-		<Compile Include="Others\\Oids\NaveNodrizaOid.cs" />
-		<Compile Include="Others\\Oids\AeronaveOid.cs" />
-		<Compile Include="Others\\Oids\PasajeroOid.cs" />
-		<Compile Include="Others\\Oids\PasajeroAeronaveOid.cs" />
-		<Compile Include="Others\\Oids\RevisionOid.cs" />
-		<Compile Include="Others\\Oids\RevisionPasajeroOid.cs" />
-		<Compile Include="Others\\Oids\AdministradorOid.cs" />
-		<Compile Include="Others\Oids\AgentInfo.cs" />
-		<Compile Include="Others\Oids\AnonymousAgentInfo.cs" />
-		<Compile Include="Others\Oids\Oid.cs" />
-		<Compile Include="Others\Oids\AlternateKey.cs" />
-		<Compile Include="Others\Oids\Interfaces\IOidField.cs" />
-		<Compile Include="Others\Oids\Interfaces\IOid.cs" />
-		<Compile Include="Others\Oids\Interfaces\IAlternateKey.cs" />
-		<Compile Include="Others\Context\IUContext.cs" />
-		<Compile Include="Others\Context\IUMainContext.cs" />
-		<Compile Include="Others\Context\IUClassContext.cs" />
-		<Compile Include="Others\Context\IUInstanceContext.cs" />
-		<Compile Include="Others\Context\IUMasterDetailContext.cs" />
-		<Compile Include="Others\Context\IUPopulationContext.cs" />
-		<Compile Include="Others\Context\IUQueryContext.cs" />
-		<Compile Include="Others\Context\IUContextArgumentInfo.cs" />
-		<Compile Include="Others\Context\IUErrorContext.cs" />
-		<Compile Include="Others\Context\ContextType.cs" />
-		<Compile Include="Others\Context\ContextNavigationalFiltering.cs" />
-		<Compile Include="Others\Context\RelationType.cs" />
-		<Compile Include="Others\Context\ConditionalNavigation\ConditionalNavigationInfo.cs" />
-		<Compile Include="Others\Context\ConditionalNavigation\DestinationInfo.cs" />
-		<Compile Include="Others\Context\ExchangeInfo\ExchangeInfo.cs" />
-		<Compile Include="Others\Context\ExchangeInfo\ExchangeInfoAction.cs" />
-		<Compile Include="Others\Context\ExchangeInfo\ExchangeInfoConditionalNavigation.cs" />
-		<Compile Include="Others\Context\ExchangeInfo\ExchangeInfoNavigation.cs" />
-		<Compile Include="Others\Context\ExchangeInfo\ExchangeInfoSelectionForward.cs" />
-		<Compile Include="Others\Context\IUInputFields\IUInputFieldsContext.cs" />
-		<Compile Include="Others\Context\IUInputFields\IUFilterContext.cs" />
-		<Compile Include="Others\Context\IUInputFields\IUServiceContext.cs" />
-		<Compile Include="Others\Context\NavigationalFiltering\NavigationalFiltering-ArgumentList.cs" />
-		<Compile Include="Others\Constants.cs" />
-		<Compile Include="Others\ExcelAutomation.cs" />
-		<Compile Include="Others\ModelType.cs" />
-		<Compile Include="Others\UtilFunctions.cs" />
-		<Compile Include="Others\IntroductionPattern.cs" />
-		<Compile Include="Others\Collections\ListKeyed.cs" />
-		<Compile Include="Others\Collections\Interfaces\IListKeyed.cs" />
-		<Compile Include="Others\StandardFunctions\DateFunctions.cs" />
-		<Compile Include="Others\StandardFunctions\NumericFunctions.cs" />
-		<Compile Include="Others\StandardFunctions\StringFunctions.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Application.cs" />
-		<Compile Include="InteractionToolkit\Preferences\CustomizeForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Preferences\CustomizeForm.Designer.cs">
-			<DependentUpon>CustomizeForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\Preferences\EditDisplaySetItemForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Preferences\EditDisplaySetItemForm.Designer.cs">
-			<DependentUpon>EditDisplaySetItemForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\Preferences\RenameDisplaySetForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Preferences\RenameDisplaySetForm.Designer.cs">
-			<DependentUpon>RenameDisplaySetForm.cs</DependentUpon>
-		</Compile>
-
-		<Compile Include="InteractionToolkit\MainForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\MainForm.Designer.cs">
-			<DependentUpon>MainForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\LoginForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\LoginForm.Designer.cs">
-			<DependentUpon>LoginForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\CancelWindow.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\CancelWindow.Designer.cs">
-			<DependentUpon>Cancelwindow.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\ChangePasswordForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\ChangePasswordForm.Designer.cs">
-			<DependentUpon>ChangePasswordForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\AboutBoxForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\AboutBoxForm.designer.cs">
-			<DependentUpon>AboutBoxForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\ErrorForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\ErrorForm.Designer.cs">
-			<DependentUpon>ErrorForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\MainSplashForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\MainSplashForm.Designer.cs">
-			<DependentUpon>MainSplashForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\ConditionalNavigationQuestionForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\ConditionalNavigationQuestionForm.Designer.cs">
-			<DependentUpon>ConditionalNavigationQuestionForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\MultiExecutionReport.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\MultiExecutionReport.Designer.cs">
-			<DependentUpon>MultiExecutionReport.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\TextEnlargeForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\TextEnlargeForm.Designer.cs">
-			<DependentUpon>TextEnlargeForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUServices\Crear_NaveNodrizaInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUServices\Crear_NaveNodrizaInboundIT.Designer.cs">
-			<DependentUpon>Crear_NaveNodrizaInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUServices\Crear_NaveNodrizaInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>Crear_NaveNodrizaInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_delete_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_delete_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_edit_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_edit_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUPopulations\PIU_NaveNodrizaIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUPopulations\PIU_NaveNodrizaIT.Designer.cs">
-			<DependentUpon>PIU_NaveNodrizaIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUPopulations\PIU_NaveNodrizaIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>PIU_NaveNodrizaIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUInstances\_Auto_IT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\NaveNodriza\\IUInstances\_Auto_IT.Designer.cs">
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUInstances\_Auto_IT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Aeronave\\IUServices\Crear_AeronaveInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Aeronave\\IUServices\Crear_AeronaveInboundIT.Designer.cs">
-			<DependentUpon>Crear_AeronaveInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Aeronave\\IUServices\Crear_AeronaveInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>Crear_AeronaveInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Aeronave\\IUServices\SIU_delete_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Aeronave\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Aeronave\\IUServices\SIU_delete_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Aeronave\\IUServices\SIU_edit_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Aeronave\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Aeronave\\IUServices\SIU_edit_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Aeronave\\IUPopulations\PIU_AeronaveIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Aeronave\\IUPopulations\PIU_AeronaveIT.Designer.cs">
-			<DependentUpon>PIU_AeronaveIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Aeronave\\IUPopulations\PIU_AeronaveIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>PIU_AeronaveIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Aeronave\\IUInstances\_Auto_IT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Aeronave\\IUInstances\_Auto_IT.Designer.cs">
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Aeronave\\IUInstances\_Auto_IT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_create_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_create_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Pasajero\\IUServices\SIU_create_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_delete_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Pasajero\\IUServices\SIU_delete_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_edit_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Pasajero\\IUServices\SIU_edit_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Pasajero\\IUPopulations\PIU_PasajeroIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Pasajero\\IUPopulations\PIU_PasajeroIT.Designer.cs">
-			<DependentUpon>PIU_PasajeroIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Pasajero\\IUPopulations\PIU_PasajeroIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>PIU_PasajeroIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Pasajero\\IUInstances\_Auto_IT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Pasajero\\IUInstances\_Auto_IT.Designer.cs">
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Pasajero\\IUInstances\_Auto_IT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_create_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_create_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_create_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_delete_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_delete_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_edit_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_edit_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUInstances\IIU_PasajeroAeronaveIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUInstances\IIU_PasajeroAeronaveIT.Designer.cs">
-			<DependentUpon>IIU_PasajeroAeronaveIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUInstances\IIU_PasajeroAeronaveIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>IIU_PasajeroAeronaveIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUPopulations\PIU_PasajeroAeronaveIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUPopulations\PIU_PasajeroAeronaveIT.Designer.cs">
-			<DependentUpon>PIU_PasajeroAeronaveIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUPopulations\PIU_PasajeroAeronaveIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>PIU_PasajeroAeronaveIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUMasterDetails\MDIU_PasajeroAeronaveIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\PasajeroAeronave\\IUMasterDetails\MDIU_PasajeroAeronaveIT.Designer.cs">
-			<DependentUpon>MDIU_PasajeroAeronaveIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUMasterDetails\MDIU_PasajeroAeronaveIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>MDIU_PasajeroAeronaveIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Revision\\IUServices\SIU_create_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Revision\\IUServices\SIU_create_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Revision\\IUServices\SIU_create_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Revision\\IUServices\SIU_delete_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Revision\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Revision\\IUServices\SIU_delete_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Revision\\IUServices\SIU_edit_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Revision\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Revision\\IUServices\SIU_edit_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Revision\\IUInstances\IIU_RevisionIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Revision\\IUInstances\IIU_RevisionIT.Designer.cs">
-			<DependentUpon>IIU_RevisionIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Revision\\IUInstances\IIU_RevisionIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>IIU_RevisionIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\Revision\\IUPopulations\_Auto_IT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\Revision\\IUPopulations\_Auto_IT.Designer.cs">
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\Revision\\IUPopulations\_Auto_IT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_create_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_create_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_create_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_delete_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_delete_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_edit_instanceInboundIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_edit_instanceInboundIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUPopulations\PIU_RevisionPasajeroIT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUPopulations\PIU_RevisionPasajeroIT.Designer.cs">
-			<DependentUpon>PIU_RevisionPasajeroIT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUPopulations\PIU_RevisionPasajeroIT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>PIU_RevisionPasajeroIT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUInstances\_Auto_IT.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\RevisionPasajero\\IUInstances\_Auto_IT.Designer.cs">
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</Compile>
-		<EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUInstances\_Auto_IT.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>_Auto_IT.cs</DependentUpon>
-		</EmbeddedResource>
-		<Compile Include="Properties\Resources.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DesignTime>True</DesignTime>
-			<DependentUpon>Resources.resx</DependentUpon>
-		</Compile>
-		<Compile Include="Properties\Settings.Designer.cs">
-			<AutoGen>True</AutoGen>
-			<DesignTimeSharedInput>True</DesignTimeSharedInput>
-			<DependentUpon>Settings.settings</DependentUpon>
-		</Compile>
-		<Compile Include="Settings.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<EmbeddedResource Include="InteractionToolkit\MainSplashForm.resx">
-			<SubType>Designer</SubType>
-			<DependentUpon>MainSplashForm.cs</DependentUpon>
-		</EmbeddedResource>
-		<EmbeddedResource Include="InteractionToolkit\PrintForm.resx">
-			<DependentUpon>PrintForm.cs</DependentUpon>
-			<SubType>Designer</SubType>
-		</EmbeddedResource>
-		<EmbeddedResource Include="InteractionToolkit\StateChangeDetectionErrorForm.resx">
-			<DependentUpon>StateChangeDetectionErrorForm.cs</DependentUpon>
-			<SubType>Designer</SubType>
-		</EmbeddedResource>		
-		<EmbeddedResource Include="Properties\Resources.resx">
-			<SubType>Designer</SubType>
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="InteractionToolkit\PrintForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\PrintForm.Designer.cs">
-			<DependentUpon>PrintForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="InteractionToolkit\StateChangeDetectionErrorForm.cs">
-			<SubType>Form</SubType>
-		</Compile>
-		<Compile Include="InteractionToolkit\StateChangeDetectionErrorForm.Designer.cs">
-			<DependentUpon>StateChangeDetectionErrorForm.cs</DependentUpon>
-		</Compile>
-		<Compile Include="Others\Reports\Common.cs" />
-		<Compile Include="Others\Reports\DataSets\PrintToDataSets.cs" />
-		<Compile Include="Others\Reports\Excel\Auxiliar\Excel.Automation.cs" />
-		<Compile Include="Others\Reports\Excel\PrintToExcel.cs" />
-		<Compile Include="Others\Reports\ReportPrinter.cs" />
-		<Compile Include="Others\Reports\Word\Auxiliar\Word.Automation.cs" />
-		<Compile Include="Others\Reports\Word\PrintToWord.cs" />
-		<Compile Include="Others\Reports\XML\PrintToXML.cs" />
-		<Compile Include="Resources\Language\CultureManager.cs" />
-		<Compile Include="Resources\Language\LanguageConstantKeys.cs" />
-		<Compile Include="Resources\Language\LanguageConstantValues.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="App.config" />
-		<None Include="Properties\Settings.settings">
-		<Generator>SettingsSingleFileGenerator</Generator>
-		<LastGenOutput>Settings.Designer.cs</LastGenOutput>
-		</None>
-	</ItemGroup>
-	<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-	<!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24AD206E-BFBA-440E-BE53-68B38BB30822}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIGEM.Client</RootNamespace>
+    <AssemblyName>Desktop</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Secure Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;SECURE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adaptor\Server\Arguments\Arguments.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Arguments\FilterVariables.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Arguments\Navigational.Filtering.Arguments.ArgumentList.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Arguments\Navigational.Filtering.Variables.ArgumentList.Serializer.cs" />
+    <Compile Include="Adaptor\Server\ChangeDetectionItems\ChangeDetectionItem.cs" />
+    <Compile Include="Adaptor\Server\ChangeDetectionItems\ChangeDetectionItems.Serializer.cs" />
+    <Compile Include="Adaptor\Server\OID\AdaptorOID.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Request\Query\Query.Request.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Request\Query\QueryRequest.cs" />
+    <Compile Include="Adaptor\Server\Request\Request.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Request\Service\Service.Request.cs" />
+    <Compile Include="Adaptor\Server\Request\Service\Service.Request.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Response\Query\Query.Response.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Response\Response.Serializer.cs" />
+    <Compile Include="Adaptor\Server\ServerDataTable.cs" />
+    <Compile Include="Adaptor\Server\ServerOIDs.cs" />
+    <Compile Include="Adaptor\Server\Response\Service\Service.Response.cs" />
+    <Compile Include="Adaptor\Server\Response\Service\Service.Response.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Response\Statistics\Statistics.cs" />
+    <Compile Include="Adaptor\Server\Response\Statistics\Statistics.Serializer.cs" />
+    <Compile Include="Adaptor\Server\ServerQuery.cs" />
+    <Compile Include="Adaptor\Server\ServerQueryWithNavigationalFiltering.cs" />
+    <Compile Include="Adaptor\Server\Arguments\Argument.cs" />
+    <Compile Include="Adaptor\Server\Common\MODEL.Types.cs" />
+    <Compile Include="Adaptor\Server\Common\DTD.cs" />
+    <Compile Include="Adaptor\Server\ServerConnection.cs" />
+    <Compile Include="Adaptor\Server\ServerService.cs" />
+    <Compile Include="Adaptor\Server\ServerNavigationalFiltering.cs" />
+    <Compile Include="Adaptor\Server\Server-Arguments.cs" />
+    <Compile Include="Adaptor\Server\Error.Exceptions\Error.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Error.Exceptions\Exception.cs" />
+    <Compile Include="Adaptor\Server\Error.Exceptions\ChangedItem.cs" />
+    <Compile Include="Adaptor\Server\Error.Exceptions\ChangedItems.Serializer.cs" />
+    <Compile Include="Adaptor\Server\Request\Request.cs" />
+    <Compile Include="Adaptor\Server\Response\Response.cs" />
+    <Compile Include="Adaptor\Socket\ActiveXConnection.cs" />
+    <Compile Include="Adaptor\Socket\HTTPConnection.cs" />
+    <Compile Include="Adaptor\Socket\NativeConnection.cs" />
+    <Compile Include="Adaptor\Socket\AbstractConnection.cs" />
+    <Compile Include="Adaptor\Socket\SOAPConnection.cs" />
+    <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\ActionController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\ActionItemController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\ArgumentController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\ArgumentDVController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\ArgumentOVController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\ArgumentOVControllerAbstract.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\ArgumentOVPreloadController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\DisplaySetByBlocksController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\DisplaySetController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\DisplaySetItem.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\DisplaySetInformation.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\DisplaySetServiceInfo.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\DisplaySetServiceArgumentInfo.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\HatElementController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\HatLeafController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\HatNodeController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\HatLeafReportController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\NavigationController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\NavigationItemController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\OrderCriteriaController.cs" />
+    <Compile Include="Controllers\Auxiliar patterns\TreeNodeController.cs" />
+    <Compile Include="Controllers\ControllerFactory\DefinedSelections.cs" />
+    <Compile Include="Controllers\ControllerFactory\IntroductionPatterns.cs" />
+    <Compile Include="Controllers\ControllerFactory\Classes\NaveNodriza.cs" />
+    <Compile Include="Controllers\ControllerFactory\Classes\Aeronave.cs" />
+    <Compile Include="Controllers\ControllerFactory\Classes\Pasajero.cs" />
+    <Compile Include="Controllers\ControllerFactory\Classes\PasajeroAeronave.cs" />
+    <Compile Include="Controllers\ControllerFactory\Classes\Revision.cs" />
+    <Compile Include="Controllers\ControllerFactory\Classes\RevisionPasajero.cs" />
+    <Compile Include="Controllers\ControllerFactory\MainScenario.cs" />
+    <Compile Include="Controllers\Events\RefreshNodeRequiredEventArgs.cs" />
+    <Compile Include="Controllers\Events\LaunchingScenarioEventArgs.cs" />
+    <Compile Include="Controllers\Events\ContextRequiredEventArgs.cs" />
+    <Compile Include="Controllers\Events\ExecuteCommandRefreshNodeEventArgs.cs" />
+    <Compile Include="Controllers\Events\FinalNodeSelectedEventArgs.cs" />
+    <Compile Include="Controllers\Events\IntermediaNodeSelectedEventArgs.cs" />
+    <Compile Include="Controllers\Events\GetNextNodeDataBlockEventArgs.cs" />
+    <Compile Include="Controllers\Events\InstanceNodeSelectedEventArgs.cs" />
+    <Compile Include="Controllers\Events\NodeDataToBeRefreshedEventArgs.cs" />
+    <Compile Include="Controllers\Events\SearchIntermediaNodeEventArgs.cs" />
+    <Compile Include="Controllers\Events\SelectedInstancesRequiredEventArgs.cs" />
+    <Compile Include="Controllers\Events\ShowDataInSubNodeEventArgs.cs" />
+    <Compile Include="Controllers\Events\ArgumentEventArgs.cs" />
+    <Compile Include="Controllers\Events\EnabledChangedEventArgs.cs" />
+    <Compile Include="Controllers\Events\CheckForPendingChangesEventArgs.cs" />
+    <Compile Include="Controllers\Events\ExecuteCommandBaseEventArgs.cs" />
+    <Compile Include="Controllers\Events\ExecuteCommandEditorInstanceEventArgs.cs" />
+    <Compile Include="Controllers\Events\ExecuteCommandEventArgs.cs" />
+    <Compile Include="Controllers\Events\ExecuteCommandRefreshEventArgs.cs" />
+    <Compile Include="Controllers\Events\ExecuteFilterEventArgs.cs" />
+    <Compile Include="Controllers\Events\FirstPageEventArgs.cs" />
+    <Compile Include="Controllers\Events\GotFocusEventArgs.cs" />
+    <Compile Include="Controllers\Events\InstanceCreatedEventArgs.cs" />
+    <Compile Include="Controllers\Events\InstanceDeletedEventArgs.cs" />
+    <Compile Include="Controllers\Events\InstanceModifiedEventArgs.cs" />
+    <Compile Include="Controllers\Events\InstancesSelectedEventArgs.cs" />
+    <Compile Include="Controllers\Events\LostFocusEventArgs.cs" />
+    <Compile Include="Controllers\Events\NextPageEventArgs.cs" />
+    <Compile Include="Controllers\Events\OrderCriteriaChangedEventArgs.cs" />
+    <Compile Include="Controllers\Events\PreviousPageEventArgs.cs" />
+    <Compile Include="Controllers\Events\RefreshInstanceArgs.cs" />
+    <Compile Include="Controllers\Events\RefreshPageEventArgs.cs" />
+    <Compile Include="Controllers\Events\RefreshRequiredEventArgs.cs" />
+    <Compile Include="Controllers\Events\RefreshRequiredInstancesEventArgs.cs" />
+    <Compile Include="Controllers\Events\RefreshRequiredMasterEventArgs.cs" />
+    <Compile Include="Controllers\Events\SelectInstanceEventArgs.cs" />
+    <Compile Include="Controllers\Events\SelectNextPreviousInstanceEventArgs.cs" />
+    <Compile Include="Controllers\Events\SelectedChangedEventArgs.cs" />
+    <Compile Include="Controllers\Events\SelectedInstanceChangedEventArgs.cs" />
+    <Compile Include="Controllers\Events\ServiceSuccessEventArgs.cs" />
+    <Compile Include="Controllers\Events\TriggerEventArgs.cs" />
+    <Compile Include="Controllers\Events\ValueChangedEventArgs.cs" />
+    <Compile Include="Controllers\Interfaces\IInstancesSelector.cs" />
+    <Compile Include="Controllers\Interfaces\ISelectionBackward.cs" />
+    <Compile Include="Controllers\Interfaces\IActionItemSuscriber.cs" />
+    <Compile Include="Controllers\Interfaces\IActionItemEvents.cs" />
+    <Compile Include="Controllers\Interfaces\INavigationItemSuscriber.cs" />
+    <Compile Include="Controllers\Interfaces\INavigationItemEvents.cs" />
+    <Compile Include="Controllers\Interfaces\IDetailController.cs" />
+    <Compile Include="Controllers\IUs\IUController.cs" />
+    <Compile Include="Controllers\IUs\IUInstanceController.cs" />
+    <Compile Include="Controllers\IUs\IUPopulationController.cs" />
+    <Compile Include="Controllers\IUs\IUMainController.cs" />
+    <Compile Include="Controllers\IUs\IUMasterDetailController.cs" />
+    <Compile Include="Controllers\IUs\IUQueryController.cs" />
+    <Compile Include="Controllers\IUs\IUServiceController.cs" />
+    <Compile Include="Controllers\IUs\IUInputControllers\IUFilterController.cs" />
+    <Compile Include="Controllers\IUs\IUInputControllers\IUInputFieldsController.cs" />
+    <Compile Include="Controllers\IUs\IUInputControllers\FilterControllerList.cs" />
+    <Compile Include="Controllers\IUs\IUInputControllers\ArgumentControllerList.cs" />
+    <Compile Include="Controllers\IUs\IUTreeController.cs" />
+    <Compile Include="Controllers\IUs\IUFilterReportController.cs" />
+    <Compile Include="Logics\NaveNodriza\Services\create_instanceLogic.cs" />
+    <Compile Include="Logics\NaveNodriza\Services\delete_instanceLogic.cs" />
+    <Compile Include="Logics\NaveNodriza\Services\edit_instanceLogic.cs" />
+    <Compile Include="Logics\NaveNodriza\\ClassLogic.cs" />
+    <Compile Include="Logics\Aeronave\Services\create_instanceLogic.cs" />
+    <Compile Include="Logics\Aeronave\Services\delete_instanceLogic.cs" />
+    <Compile Include="Logics\Aeronave\Services\edit_instanceLogic.cs" />
+    <Compile Include="Logics\Aeronave\\ClassLogic.cs" />
+    <Compile Include="Logics\Pasajero\Services\create_instanceLogic.cs" />
+    <Compile Include="Logics\Pasajero\Services\delete_instanceLogic.cs" />
+    <Compile Include="Logics\Pasajero\Services\edit_instanceLogic.cs" />
+    <Compile Include="Logics\Pasajero\\ClassLogic.cs" />
+    <Compile Include="Logics\PasajeroAeronave\Services\create_instanceLogic.cs" />
+    <Compile Include="Logics\PasajeroAeronave\Services\delete_instanceLogic.cs" />
+    <Compile Include="Logics\PasajeroAeronave\Services\edit_instanceLogic.cs" />
+    <Compile Include="Logics\PasajeroAeronave\\ClassLogic.cs" />
+    <Compile Include="Logics\Revision\Services\create_instanceLogic.cs" />
+    <Compile Include="Logics\Revision\Services\delete_instanceLogic.cs" />
+    <Compile Include="Logics\Revision\Services\edit_instanceLogic.cs" />
+    <Compile Include="Logics\Revision\\ClassLogic.cs" />
+    <Compile Include="Logics\RevisionPasajero\Services\create_instanceLogic.cs" />
+    <Compile Include="Logics\RevisionPasajero\Services\delete_instanceLogic.cs" />
+    <Compile Include="Logics\RevisionPasajero\Services\edit_instanceLogic.cs" />
+    <Compile Include="Logics\RevisionPasajero\\ClassLogic.cs" />
+    <Compile Include="Logics\Administrador\\ClassLogic.cs" />
+    <Compile Include="Logics\Agents.cs" />
+    <Compile Include="Logics\Logic.cs" />
+    <Compile Include="Logics\UserFunctions\UserFunctionsLogic.cs" />
+    <Compile Include="Logics\UserFunctions\RemoteUserFunctionsLogic.cs" />
+    <Compile Include="Logics\DependencyRulesEventLogic.cs" />
+    <Compile Include="Logics\DependencyRulesAgentLogic.cs" />
+    <Compile Include="Logics\DependencyRulesCache.cs" />
+    <Compile Include="Logics\ServiceType.cs" />
+    <Compile Include="Logics\ServiceEffectType.cs" />
+    <Compile Include="Logics\Preferences\FormPrefs.cs" />
+    <Compile Include="Logics\Preferences\InstancePrefs.cs" />
+    <Compile Include="Logics\Preferences\IScenarioPrefs.cs" />
+    <Compile Include="Logics\Preferences\PopulationPrefs.cs" />
+    <Compile Include="Logics\Preferences\PreferencesMng.cs" />
+    <Compile Include="Presentation\DefaultFormats.cs" />
+    <Compile Include="Presentation\ScenarioManager.cs" />
+    <Compile Include="Presentation\Forms\AutonumericPresentation.cs" />
+    <Compile Include="Presentation\Forms\BlobBoxPresentation.cs" />
+    <Compile Include="Presentation\Forms\ButtonPresentation.cs" />
+    <Compile Include="Presentation\Forms\ComboBoxPresentation.cs" />
+    <Compile Include="Presentation\Forms\ComboBoxDisplaySetPresentation.cs" />
+    <Compile Include="Presentation\Forms\ControlListPresentation.cs" />
+    <Compile Include="Presentation\Forms\DataGridViewPresentation.cs" />
+    <Compile Include="Presentation\Forms\EditorPresentation.cs" />
+    <Compile Include="Presentation\Forms\ScenarioPresentation.cs" />
+    <Compile Include="Presentation\Forms\LabelPresentation.cs" />
+    <Compile Include="Presentation\Forms\LabelPasswordPresentation.cs" />
+    <Compile Include="Presentation\Forms\TabPagePresentation.cs" />
+    <Compile Include="Presentation\Forms\LabelDisplaySetPresentation.cs" />
+    <Compile Include="Presentation\Forms\LinkLabelPresentation.cs" />
+    <Compile Include="Presentation\Forms\ListViewPresentation.cs" />
+    <Compile Include="Presentation\Forms\TextBoxPresentation.cs" />
+    <Compile Include="Presentation\Forms\MaskedTextBoxPresentation.cs" />
+    <Compile Include="Presentation\Forms\MaskedTextBoxPresentationWithDefinedSelection.cs" />
+    <Compile Include="Presentation\Forms\DateTimePickerPresentation.cs" />
+    <Compile Include="Presentation\Forms\ToolStripButtonPresentation.cs" />
+    <Compile Include="Presentation\Forms\ToolStripDropDownButtonPresentation.cs" />
+    <Compile Include="Presentation\Forms\ToolStripMenuItemPresentation.cs" />
+    <Compile Include="Presentation\Forms\ToolStripStatusLabelNumberInstancesPresentation.cs" />
+    <Compile Include="Presentation\Forms\ToolStripStatusLabelPresentation.cs" />
+    <Compile Include="Presentation\Forms\CheckBoxPresentation.cs" />
+    <Compile Include="Presentation\Forms\PasswordPresentation.cs" />
+    <Compile Include="Presentation\Forms\TreeViewPresentation.cs" />
+    <Compile Include="Presentation\Forms\TabControlPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\IPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\IDisplaySetPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\IDisplaySetByBlocksPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\ILabelPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\IEditorPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\ISelectorPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\IScenarioPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\IListPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\ITriggerPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\IGroupContainerPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\IMaskPresentation.cs" />
+    <Compile Include="Presentation\Interfaces\INumericPresentation.cs" />
+    <Compile Include="Presentation\Events\EnlargeTextChangedEventArgs.cs" />
+    <Compile Include="Others\\Oids\NaveNodrizaOid.cs" />
+    <Compile Include="Others\\Oids\AeronaveOid.cs" />
+    <Compile Include="Others\\Oids\PasajeroOid.cs" />
+    <Compile Include="Others\\Oids\PasajeroAeronaveOid.cs" />
+    <Compile Include="Others\\Oids\RevisionOid.cs" />
+    <Compile Include="Others\\Oids\RevisionPasajeroOid.cs" />
+    <Compile Include="Others\\Oids\AdministradorOid.cs" />
+    <Compile Include="Others\Oids\AgentInfo.cs" />
+    <Compile Include="Others\Oids\AnonymousAgentInfo.cs" />
+    <Compile Include="Others\Oids\Oid.cs" />
+    <Compile Include="Others\Oids\AlternateKey.cs" />
+    <Compile Include="Others\Oids\Interfaces\IOidField.cs" />
+    <Compile Include="Others\Oids\Interfaces\IOid.cs" />
+    <Compile Include="Others\Oids\Interfaces\IAlternateKey.cs" />
+    <Compile Include="Others\Context\IUContext.cs" />
+    <Compile Include="Others\Context\IUMainContext.cs" />
+    <Compile Include="Others\Context\IUClassContext.cs" />
+    <Compile Include="Others\Context\IUInstanceContext.cs" />
+    <Compile Include="Others\Context\IUMasterDetailContext.cs" />
+    <Compile Include="Others\Context\IUPopulationContext.cs" />
+    <Compile Include="Others\Context\IUQueryContext.cs" />
+    <Compile Include="Others\Context\IUContextArgumentInfo.cs" />
+    <Compile Include="Others\Context\IUErrorContext.cs" />
+    <Compile Include="Others\Context\ContextType.cs" />
+    <Compile Include="Others\Context\ContextNavigationalFiltering.cs" />
+    <Compile Include="Others\Context\RelationType.cs" />
+    <Compile Include="Others\Context\ConditionalNavigation\ConditionalNavigationInfo.cs" />
+    <Compile Include="Others\Context\ConditionalNavigation\DestinationInfo.cs" />
+    <Compile Include="Others\Context\ExchangeInfo\ExchangeInfo.cs" />
+    <Compile Include="Others\Context\ExchangeInfo\ExchangeInfoAction.cs" />
+    <Compile Include="Others\Context\ExchangeInfo\ExchangeInfoConditionalNavigation.cs" />
+    <Compile Include="Others\Context\ExchangeInfo\ExchangeInfoNavigation.cs" />
+    <Compile Include="Others\Context\ExchangeInfo\ExchangeInfoSelectionForward.cs" />
+    <Compile Include="Others\Context\IUInputFields\IUInputFieldsContext.cs" />
+    <Compile Include="Others\Context\IUInputFields\IUFilterContext.cs" />
+    <Compile Include="Others\Context\IUInputFields\IUServiceContext.cs" />
+    <Compile Include="Others\Context\NavigationalFiltering\NavigationalFiltering-ArgumentList.cs" />
+    <Compile Include="Others\Constants.cs" />
+    <Compile Include="Others\ExcelAutomation.cs" />
+    <Compile Include="Others\ModelType.cs" />
+    <Compile Include="Others\UtilFunctions.cs" />
+    <Compile Include="Others\IntroductionPattern.cs" />
+    <Compile Include="Others\Collections\ListKeyed.cs" />
+    <Compile Include="Others\Collections\Interfaces\IListKeyed.cs" />
+    <Compile Include="Others\StandardFunctions\DateFunctions.cs" />
+    <Compile Include="Others\StandardFunctions\NumericFunctions.cs" />
+    <Compile Include="Others\StandardFunctions\StringFunctions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application.cs" />
+    <Compile Include="InteractionToolkit\Preferences\CustomizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Preferences\CustomizeForm.Designer.cs">
+      <DependentUpon>CustomizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\Preferences\EditDisplaySetItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Preferences\EditDisplaySetItemForm.Designer.cs">
+      <DependentUpon>EditDisplaySetItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\Preferences\RenameDisplaySetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Preferences\RenameDisplaySetForm.Designer.cs">
+      <DependentUpon>RenameDisplaySetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\CancelWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\CancelWindow.Designer.cs">
+      <DependentUpon>Cancelwindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\AboutBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\AboutBoxForm.designer.cs">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\MainSplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\MainSplashForm.Designer.cs">
+      <DependentUpon>MainSplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\ConditionalNavigationQuestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\ConditionalNavigationQuestionForm.Designer.cs">
+      <DependentUpon>ConditionalNavigationQuestionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\MultiExecutionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\MultiExecutionReport.Designer.cs">
+      <DependentUpon>MultiExecutionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\TextEnlargeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\TextEnlargeForm.Designer.cs">
+      <DependentUpon>TextEnlargeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUServices\Crear_NaveNodrizaInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUServices\Crear_NaveNodrizaInboundIT.Designer.cs">
+      <DependentUpon>Crear_NaveNodrizaInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUServices\Crear_NaveNodrizaInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Crear_NaveNodrizaInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_delete_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_delete_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_edit_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUServices\SIU_edit_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUPopulations\PIU_NaveNodrizaIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUPopulations\PIU_NaveNodrizaIT.Designer.cs">
+      <DependentUpon>PIU_NaveNodrizaIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUPopulations\PIU_NaveNodrizaIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PIU_NaveNodrizaIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUInstances\_Auto_IT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\NaveNodriza\\IUInstances\_Auto_IT.Designer.cs">
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\NaveNodriza\\IUInstances\_Auto_IT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Aeronave\\IUServices\Crear_AeronaveInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Aeronave\\IUServices\Crear_AeronaveInboundIT.Designer.cs">
+      <DependentUpon>Crear_AeronaveInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Aeronave\\IUServices\Crear_AeronaveInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Crear_AeronaveInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Aeronave\\IUServices\SIU_delete_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Aeronave\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Aeronave\\IUServices\SIU_delete_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Aeronave\\IUServices\SIU_edit_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Aeronave\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Aeronave\\IUServices\SIU_edit_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Aeronave\\IUPopulations\PIU_AeronaveIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Aeronave\\IUPopulations\PIU_AeronaveIT.Designer.cs">
+      <DependentUpon>PIU_AeronaveIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Aeronave\\IUPopulations\PIU_AeronaveIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PIU_AeronaveIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Aeronave\\IUInstances\_Auto_IT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Aeronave\\IUInstances\_Auto_IT.Designer.cs">
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Aeronave\\IUInstances\_Auto_IT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_create_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_create_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Pasajero\\IUServices\SIU_create_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_delete_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Pasajero\\IUServices\SIU_delete_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_edit_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Pasajero\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Pasajero\\IUServices\SIU_edit_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Pasajero\\IUPopulations\PIU_PasajeroIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Pasajero\\IUPopulations\PIU_PasajeroIT.Designer.cs">
+      <DependentUpon>PIU_PasajeroIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Pasajero\\IUPopulations\PIU_PasajeroIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PIU_PasajeroIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Pasajero\\IUInstances\_Auto_IT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Pasajero\\IUInstances\_Auto_IT.Designer.cs">
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Pasajero\\IUInstances\_Auto_IT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_create_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_create_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_create_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_delete_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_delete_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_edit_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUServices\SIU_edit_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUInstances\IIU_PasajeroAeronaveIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUInstances\IIU_PasajeroAeronaveIT.Designer.cs">
+      <DependentUpon>IIU_PasajeroAeronaveIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUInstances\IIU_PasajeroAeronaveIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IIU_PasajeroAeronaveIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUPopulations\PIU_PasajeroAeronaveIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUPopulations\PIU_PasajeroAeronaveIT.Designer.cs">
+      <DependentUpon>PIU_PasajeroAeronaveIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUPopulations\PIU_PasajeroAeronaveIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PIU_PasajeroAeronaveIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUMasterDetails\MDIU_PasajeroAeronaveIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\PasajeroAeronave\\IUMasterDetails\MDIU_PasajeroAeronaveIT.Designer.cs">
+      <DependentUpon>MDIU_PasajeroAeronaveIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\PasajeroAeronave\\IUMasterDetails\MDIU_PasajeroAeronaveIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MDIU_PasajeroAeronaveIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Revision\\IUServices\SIU_create_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Revision\\IUServices\SIU_create_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Revision\\IUServices\SIU_create_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Revision\\IUServices\SIU_delete_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Revision\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Revision\\IUServices\SIU_delete_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Revision\\IUServices\SIU_edit_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Revision\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Revision\\IUServices\SIU_edit_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Revision\\IUInstances\IIU_RevisionIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Revision\\IUInstances\IIU_RevisionIT.Designer.cs">
+      <DependentUpon>IIU_RevisionIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Revision\\IUInstances\IIU_RevisionIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IIU_RevisionIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\Revision\\IUPopulations\_Auto_IT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\Revision\\IUPopulations\_Auto_IT.Designer.cs">
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\Revision\\IUPopulations\_Auto_IT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_create_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_create_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_create_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_create_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_delete_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_delete_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_delete_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_delete_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_edit_instanceInboundIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_edit_instanceInboundIT.Designer.cs">
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUServices\SIU_edit_instanceInboundIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SIU_edit_instanceInboundIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUPopulations\PIU_RevisionPasajeroIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUPopulations\PIU_RevisionPasajeroIT.Designer.cs">
+      <DependentUpon>PIU_RevisionPasajeroIT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUPopulations\PIU_RevisionPasajeroIT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PIU_RevisionPasajeroIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUInstances\_Auto_IT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\RevisionPasajero\\IUInstances\_Auto_IT.Designer.cs">
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InteractionToolkit\RevisionPasajero\\IUInstances\_Auto_IT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>_Auto_IT.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InteractionToolkit\MainSplashForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainSplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteractionToolkit\PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteractionToolkit\StateChangeDetectionErrorForm.resx">
+      <DependentUpon>StateChangeDetectionErrorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InteractionToolkit\PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteractionToolkit\StateChangeDetectionErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteractionToolkit\StateChangeDetectionErrorForm.Designer.cs">
+      <DependentUpon>StateChangeDetectionErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Others\Reports\Common.cs" />
+    <Compile Include="Others\Reports\DataSets\PrintToDataSets.cs" />
+    <Compile Include="Others\Reports\Excel\Auxiliar\Excel.Automation.cs" />
+    <Compile Include="Others\Reports\Excel\PrintToExcel.cs" />
+    <Compile Include="Others\Reports\ReportPrinter.cs" />
+    <Compile Include="Others\Reports\Word\Auxiliar\Word.Automation.cs" />
+    <Compile Include="Others\Reports\Word\PrintToWord.cs" />
+    <Compile Include="Others\Reports\XML\PrintToXML.cs" />
+    <Compile Include="Resources\Language\CultureManager.cs" />
+    <Compile Include="Resources\Language\LanguageConstantKeys.cs" />
+    <Compile Include="Resources\Language\LanguageConstantValues.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
 	Other similar extension points exist, see Microsoft.Common.targets.
 	<Target Name="BeforeBuild">
 	</Target>

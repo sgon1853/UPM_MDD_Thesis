@@ -1,5 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend.csproj", "{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}"
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
@@ -16,10 +16,10 @@ Global
 		Release|Mixed Platforms = Release|Mixed Platforms
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}.Debug|.NET.ActiveCfg = Debug|Any CPU
 		{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}.Release|.NET.ActiveCfg = Release|Any CPU
 		{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AC4C6DE-BA30-4C8D-90A5-CA953E6C75E7}.Release|Any CPU.Build.0 = Release|Any CPU
